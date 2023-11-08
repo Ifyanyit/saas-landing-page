@@ -1,5 +1,4 @@
 // FAQ accordion
-
 // waiting for the content of document is loaded
 document.addEventListener("DOMContentLoaded", () => {
     // grabbing faq container
@@ -34,7 +33,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // looping through other groups
     otherGroups.forEach((otherGroup) => {
-      // making sure that the other group is not equal to the group that's clicked on
+        // making sure that the other group is not equal to the group that's clicked on
         if (otherGroup !== group) {
         // getting other group body
         const otherGroupBody = otherGroup.querySelector(".faq-group-body");
@@ -49,4 +48,18 @@ document.addEventListener("DOMContentLoaded", () => {
         otherIcon.classList.add("fa-plus");
         }});
     });
+});
+
+// mobile menu
+// adding an event listener
+document.addEventListener("DOMContentLoaded", () => {
+    // getting the hamburger button
+    const hamburgerButton = document.querySelector(".hamburger-button");
+    // getting the mobile menu
+    const mobileMenu = document.querySelector(".mobile-menu");
+
+    // listening for a click, to toggle whether burger menu is active or not
+    hamburgerButton.addEventListener("click", () =>
+        mobileMenu.classList.toggle("active")
+    );
 });
